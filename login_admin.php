@@ -6,10 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Siapkan dan periksa query
     $stmt = $conn->prepare("SELECT * FROM pengguna WHERE email = ? AND role = 'admin'");
     if (!$stmt) {
-        die("Query error: " . $conn->error); // Tampilkan error jika query gagal
+        die("Query error: " . $conn->error)
     }
 
     $stmt->bind_param("s", $email);
@@ -25,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $data['role'];
             $_SESSION['posyandu'] = $data['posyandu'];
 
-            header("Location: Home_admin.php"); // arahkan ke halaman home admin
+            header("Location: Home_admin.php"); 
             exit;
         } else {
             $error = "Password salah.";

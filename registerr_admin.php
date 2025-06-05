@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role = 'admin';
     $posyandu = $_POST['posyandu'];
 
-    // Cek email sudah ada atau belum
+    
     $cek = mysqli_query($conn, "SELECT * FROM pengguna WHERE email='$email'");
     if (mysqli_num_rows($cek) > 0) {
         $error = "Email sudah digunakan.";

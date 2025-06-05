@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $posyandu = $_POST['posyandu'];
 
-    // Cek apakah email sudah digunakan
+  
     $cek = $conn->query("SELECT * FROM pengguna WHERE email = '$email'");
     if ($cek->num_rows > 0) {
         $error = "Email sudah terdaftar.";

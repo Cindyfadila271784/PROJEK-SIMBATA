@@ -67,6 +67,6 @@ $posyandu_ortu = $_SESSION['posyandu'];
         </div>
     </div>
 </div>
-<!-- JS script tetap -->
+
 </body>
 </html>

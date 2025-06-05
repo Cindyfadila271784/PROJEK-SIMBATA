@@ -1,8 +1,8 @@
 <?php
 session_start();
-session_unset();  // Menghapus semua variabel sesi
-session_destroy(); // Mengakhiri sesi
+session_unset();  
+session_destroy(); 
 
-header("Location: login_ortu.php"); // Arahkan ke halaman login ortu (bisa diganti ke halaman home jika perlu)
+header("Location: login_ortu.php"); 
 exit;
 ?>

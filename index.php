@@ -16,7 +16,7 @@ function statusGizi($imt) {
     else return "Obesitas";
 }
 
-// Proses Simpan
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama = $_POST['nama'];
     $tgl = $_POST['tgl_lahir'];
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 
-// Ambil data untuk grafik
+
 $kategori = ['Gizi Buruk', 'Gizi Kurang', 'Gizi Baik', 'Gizi Lebih', 'Obesitas'];
 $data_gizi = [];
 

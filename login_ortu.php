@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Cek user dengan role ortu
+
     $stmt = $conn->prepare("SELECT * FROM pengguna WHERE email = ? AND role = 'ortu'");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $data['role'];
             $_SESSION['posyandu'] = $data['posyandu'];
 
-            // Arahkan ke halaman khusus ortu
+            
             header("Location: Home_ortu.php");
             exit;
         } else {

@@ -1,7 +1,6 @@
 <?php
 include 'koneksi.php';
 
-// Proses Tambah / Edit
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama = $conn->real_escape_string($_POST['nama']);
     $tanggal_lahir = $conn->real_escape_string($_POST['tgl_lahir']);
@@ -18,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// Ambil data untuk form edit
+
 $editData = null;
 if (isset($_GET['id_edit'])) {
     $id_edit = (int) $_GET['id_edit'];
