@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grafik Batang Penimbangan</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f9f0;
+      padding: 20px;
+    }
+    .chart-container {
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chart-container">
+    <h3>Grafik Jumlah Penimbangan Bayi per Bulan</h3>
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <script>
+    fetch("data_chart.php")
+      .then(res => res.json())
+      .then(data => {
+        new Chart(document.getElementById('barChart'), {
+          type: 'bar',
+          data: {
+            labels: data.labels,
+            datasets: [{
+              label: 'Jumlah Penimbangan',
+              data: data.counts,
+              backgroundColor: 'rgba(60, 179, 113, 0.7)',
+              borderColor: 'rgba(60, 179, 113, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Jumlah'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Bulan'
+                }
+              }
+            }
+          }
+        });
+      });
+  </script>
+
+</body>
+</html>

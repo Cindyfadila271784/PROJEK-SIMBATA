@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ Simbata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Header / Navbar */
+    header {
+      background-color: #B5C99A;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-weight: bold;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .logout-btn {
+      background-color: #DCEBCA;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logout-btn:hover {
+      background-color: #22a046;
+    }
+
+    /* FAQ Container */
+    .faq-container {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: #F3EFDF;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #4F7942;
+      border: 1px solid #4F7942;
+      color: #fff;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #333;
+    }
+
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      position: relative;
+      font-weight: bold;
+      color: #607b51;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+    }
+
+    .faq-question.active::after {
+      content: '-';
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #fff;
+      padding: 0 20px;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      color: #111;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding: 15px 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo">
+      <img src="logo posyandu.jpg" alt="Logo">
+      <span>SIMBATA</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="milik_ortu.php">Lihat Data</a></li>
+        <li><a href="about-ortu.php">About</a></li>
+         <li><a href="contact.html">Contack</a></li>
+
+      
+        
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FAQ Content -->
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">Apa Saja layanan yang diberikan posyandu?</div>
+      <div class="faq-answer">Penimbangan dan pemantauan tumbuh kembang bayi/balita<br>Imunisasi<br>Konseling gizi dan kesehatan keluarga.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Mengapa penimbangan rutin penting untuk balita</div>
+      <div class="faq-answer">Penimbangan rutin membantu memantau pertumbuhan balita dan mendeteksi masalah seperti gizi buruk atau stunting sejak dini.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Apa saja tanda-tanda anak mengalami masalah gizi?</div>
+      <div class="faq-answer">* Berat badan tidak bertambah atau menurun<br> * Anak tampak lesu dan tidak aktif <br> * Kekurangan zat gizi tertentu, seperti rambut rontok/kulit kering</div>
+    </div>
+     <div class="faq-item">
+      <div class="faq-question">Apa itu stunting dan bagaimana posyandu mencegahnya?</div>
+      <div class="faq-answer">Stunting adalah kondisi gagal tumbuh pada anak akibat kekurangan gizi kronis. Posyandu membantu mencegah stunting dengan memberikan pemantauan tumbuh kembang anak, penyuluhan gizi, serta pemberian vitamin dan makanan tambahan.</div>
+    </div>
+    
+    <!-- Tambahkan FAQ-item lainnya di sini -->
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        q.classList.toggle('active');
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

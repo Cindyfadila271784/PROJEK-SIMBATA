@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Posyandu Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #fdfeff;
+      color: #ffffff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .btn-login {
+      padding: 10px 20px;
+      background-color: #2e2ab9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      background: url('download.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      height: 100vh;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* overlay hitam transparan */
+      z-index: 1;
+    }
+
+    .hero-text {
+      max-width: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .hero-text .highlight {
+      color: #58a8d7;
+    }
+
+    .hero-text p {
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    .btn-appointment {
+      padding: 12px 25px;
+      background-color: #00cdd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    .hero-img {
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero-img img {
+      max-width: 450px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Posyandu" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Layanan Kami</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-login" onclick="showLoginOptions()">Login</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>THE BEST <span class="highlight">THERAPY</span><br>AND INJURIES <span class="highlight">TREATMENT</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+      <a href="#" class="btn-appointment">Make An Appointment</a>
+    </div>
+    
+  </section>
+  <!-- Modal Pilihan Login -->
+<div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); z-index: 1000;">
+  <div style="background:white; padding:30px; border-radius:8px; width:300px; margin:100px auto; text-align:center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    <h4>Pilih Login</h4>
+    <a href="login_admin.php" class="btn-login" style="background-color:#2e2ab9; margin-top:15px; display:block;">Login Admin</a>
+    <a href="login_ortu.php" class="btn-login" style="background-color:#28a745; margin-top:10px; display:block;">Login Orang Tua</a>
+    <br>
+    <button onclick="hideLoginOptions()" style="margin-top:15px;">Batal</button>
+  </div>
+</div>
+<script>
+  function showLoginOptions() {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+
+  function hideLoginOptions() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

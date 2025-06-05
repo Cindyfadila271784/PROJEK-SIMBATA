@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - SIMBATA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #f0f4ec, #ffffff);
+      color: #333;
+    }
+
+    header.navbar {
+      background-color: #B5C99A;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 12px;
+      border-radius: 50%;
+    }
+
+    .navbar nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #f0f4ec;
+    }
+
+    .navbar a.btn-login {
+      padding: 8px 16px;
+      background-color: #DCEBCA;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a.btn-login:hover {
+      background-color: #cfe2b6;
+    }
+
+    .contact-section {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 32px;
+      color: #5a744b;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-box {
+      background: #e9f3dc;
+      padding: 25px 20px;
+      border-radius: 12px;
+      width: 230px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .contact-box i {
+      font-size: 36px;
+      color: #6c8e49;
+      margin-bottom: 12px;
+    }
+
+    .contact-box h4 {
+      font-size: 18px;
+      color: #5a744b;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #B5C99A;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-box {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo posyandu.jpg" alt="Logo">
+      <span style="font-size: 22px; font-weight: bold;">SIMBATA</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Home_admin.php">Home</a></li>
+        <li><a href="tambah_ortuu.php">Tambah Data</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="index-FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+
+  <section class="contact-section">
+    <h2>Hubungi Kami</h2>
+    <p>Silakan hubungi kami jika ada pertanyaan, saran, atau informasi lainnya.</p>
+
+    <div class="contact-container">
+      <div class="contact-box">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>admin@simbata.com</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-phone"></i>
+        <h4>Telepon</h4>
+        <p>0812 3456 7890</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Alamat</h4>
+        <p>Jl. Kandeman, Batang</p>
+        <p>Jawa Tengah, Indonesia</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-clock"></i>
+        <h4>Jam Kerja</h4>
+        <p>Senin - Jumat: 09:00 - 17:00</p>
+        <p>Sabtu - Minggu: 09:00 - 15:00</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Sistem Informasi bayi dan balita.
+  </footer>
+
+</body>
+</html>
